@@ -1,5 +1,4 @@
 import 'package:doctorapp/view/Page.dart';
-import 'package:doctorapp/view/personal_data.dart';
 import 'package:flutter/material.dart';
 import '../Consts/colors.dart';
 
@@ -21,8 +20,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Container(
             padding: const EdgeInsets.only(top: 50.0, bottom: 40.0),
             child: Column(
-              children: <Widget>[
-                const Text(
+              children:  <Widget>[
+                const  Text(
                   "الصفحة الشخصية",
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
@@ -30,15 +29,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   height: 15,
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(top: 20),
+                  padding:  EdgeInsets.only(top: 20),
                 ),
                 const SizedBox(height: 5),
                 const Text(
-                  'اسم الطبيب',
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 16,
-                      color: Colors.black),
+                  'اسم المريض',
+                  style: TextStyle(fontWeight: FontWeight.normal , fontSize: 16 , color: Colors.black),
                 ),
                 const SizedBox(height: 50),
                 Container(
@@ -49,32 +45,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Expanded(
                         child: TextButton(
                           style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(12),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
+                            padding:const EdgeInsets.all(12),
+                            shape:
+                            RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             backgroundColor: ConstColors.primaryColor,
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Personaldata()));
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>   PersonalPage()));
                           },
                           child: Row(
                             children: const [
-                              Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.white,
-                              ),
+                              Icon(Icons.arrow_back_ios , color: Colors.white,),
                               SizedBox(width: 80),
-                              Expanded(
-                                  child: Text(
-                                ' البيانات الشخصية',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18),
-                              )),
+                              Expanded(child: Text(' البيانات الشخصية' ,style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              ),)),
                             ],
                           ),
                         ),
@@ -91,29 +78,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Expanded(
                         child: TextButton(
                           style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(12),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
+                            padding:const EdgeInsets.all(12),
+                            shape:
+                            RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             backgroundColor: ConstColors.primaryColor,
                           ),
-                          onPressed: () {
-                            //         Navigator.push(context, MaterialPageRoute(builder: (context) => const Medicaldata()));
+                          onPressed: (){
+                   //         Navigator.push(context, MaterialPageRoute(builder: (context) => const Medicaldata()));
                           },
                           child: Row(
                             children: const [
-                              Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.white,
-                              ),
+                              Icon(Icons.arrow_back_ios , color: Colors.white,),
                               SizedBox(width: 80),
-                              Expanded(
-                                  child: Text(
-                                'البيانات الطبية',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18),
-                              )),
+                              Expanded(child: Text('البيانات الطبية' ,style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              ),)),
                             ],
                           ),
                         ),

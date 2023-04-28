@@ -3,8 +3,6 @@ import 'package:doctorapp/Consts/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import '../view/Page.dart';
-
 class CreateNewPassword extends StatelessWidget {
   const CreateNewPassword({Key? key}) : super(key: key);
 
@@ -38,7 +36,7 @@ class CreateNewPassword extends StatelessWidget {
                 const Text(
                   'انشاء كلمة سر جديدة ',
                   style: TextStyle(
-                      fontFamily: 'Tajawal',
+                      fontFamily: 'SST',
                       fontSize: 22,
                       color: Color(0xff121111),
                       fontWeight: FontWeight.w700),
@@ -47,7 +45,7 @@ class CreateNewPassword extends StatelessWidget {
                 const Text(
                   'أدخل كلمة السر الجديدة',
                   style: TextStyle(
-                      fontFamily: 'Tajawal',
+                      fontFamily: 'SST',
                       fontSize: 16,
                       color: Color(0xff414141),
                       fontWeight: FontWeight.w700),
@@ -57,13 +55,11 @@ class CreateNewPassword extends StatelessWidget {
                   height: 25,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
-                  SizedBox(width: 30),
-                  Text(
+                   SizedBox(width: 30),
+                   Text(
                     'كلمة السر  ',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Tajawal',
-                        fontSize: 16),
+                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
                   ),
                 ]),
                 Container(
@@ -85,7 +81,7 @@ class CreateNewPassword extends StatelessWidget {
                         ),
                         hintText: '********',
                         hintStyle: const TextStyle(
-                            fontFamily: 'Tajawal',
+                            fontFamily: 'SST',
                             color: Color(0xff888888),
                             fontSize: 13),
                         fillColor: Colors.white,
@@ -94,14 +90,12 @@ class CreateNewPassword extends StatelessWidget {
                         suffixIconColor: const Color(0xfff888888)),
                   ),
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
-                  SizedBox(width: 30),
-                  Text(
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: const[
+                   SizedBox(width: 30),
+                   Text(
                     'تأكيد كلمة السر  ',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Tajawal',
-                        fontSize: 16),
+                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
                   ),
                 ]),
                 Container(
@@ -123,7 +117,7 @@ class CreateNewPassword extends StatelessWidget {
                         ),
                         hintText: '********',
                         hintStyle: const TextStyle(
-                            fontFamily: 'Tajawal',
+                            fontFamily: 'SST',
                             color: Color(0xff888888),
                             fontSize: 13),
                         fillColor: Colors.white,
@@ -148,13 +142,11 @@ class CreateNewPassword extends StatelessWidget {
                   style: alertStyle,
                   type: AlertType.success,
                   title: "تم تسجيل دخولك بنجاح ",
+                  desc: "أدخل كلمة السر الجديدة",
                   buttons: [
                     DialogButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PersonalPage()));
+                //        Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalPage()))
                       },
                       color: ConstColors.primaryColor,
                       child: const Text(

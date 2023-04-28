@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-void main() async {
+void main() async{
   runApp(const MyApp());
 }
 
@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
             home: const LoginScreen(),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              fontFamily: 'Tajawal',
               primarySwatch: Colors.blue,
             ),
           ),
