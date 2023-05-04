@@ -38,7 +38,7 @@ class CreateNewPassword extends StatelessWidget {
                 const Text(
                   'انشاء كلمة سر جديدة ',
                   style: TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       fontSize: 22,
                       color: Color(0xff121111),
                       fontWeight: FontWeight.w700),
@@ -47,7 +47,7 @@ class CreateNewPassword extends StatelessWidget {
                 const Text(
                   'أدخل كلمة السر الجديدة',
                   style: TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       fontSize: 16,
                       color: Color(0xff414141),
                       fontWeight: FontWeight.w700),
@@ -61,7 +61,9 @@ class CreateNewPassword extends StatelessWidget {
                   Text(
                     'كلمة السر  ',
                     style: TextStyle(
-                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                        color: Colors.black,
+                        fontFamily: 'Tajawal',
+                        fontSize: 16),
                   ),
                 ]),
                 Container(
@@ -83,7 +85,7 @@ class CreateNewPassword extends StatelessWidget {
                         ),
                         hintText: '********',
                         hintStyle: const TextStyle(
-                            fontFamily: 'SST',
+                            fontFamily: 'Tajawal',
                             color: Color(0xff888888),
                             fontSize: 13),
                         fillColor: Colors.white,
@@ -97,7 +99,9 @@ class CreateNewPassword extends StatelessWidget {
                   Text(
                     'تأكيد كلمة السر  ',
                     style: TextStyle(
-                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                        color: Colors.black,
+                        fontFamily: 'Tajawal',
+                        fontSize: 16),
                   ),
                 ]),
                 Container(
@@ -119,7 +123,7 @@ class CreateNewPassword extends StatelessWidget {
                         ),
                         hintText: '********',
                         hintStyle: const TextStyle(
-                            fontFamily: 'SST',
+                            fontFamily: 'Tajawal',
                             color: Color(0xff888888),
                             fontSize: 13),
                         fillColor: Colors.white,
@@ -144,7 +148,6 @@ class CreateNewPassword extends StatelessWidget {
                   style: alertStyle,
                   type: AlertType.success,
                   title: "تم تسجيل دخولك بنجاح ",
-                  desc: "أدخل كلمة السر الجديدة",
                   buttons: [
                     DialogButton(
                       onPressed: () {

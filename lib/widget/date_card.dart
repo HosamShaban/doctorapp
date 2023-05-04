@@ -5,9 +5,8 @@ class DateCard extends StatelessWidget {
   final String title;
   final String image;
 
-  const DateCard({Key? key, required this.title, required this.image })
+  const DateCard({Key? key, required this.title, required this.image})
       : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -74,16 +73,16 @@ class DateCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 15),
+                        padding: const EdgeInsets.only(
+                            right: 20, left: 20, top: 20, bottom: 15),
                         child: MaterialButton(
                           onPressed: () {},
                           minWidth: 115,
                           height: 40,
-                          shape:
-                          RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
                           color: const Color(0xffE52222),
                           child: const Text(
                             'رفض',
@@ -97,13 +96,14 @@ class DateCard extends StatelessWidget {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 15),
+                        padding: const EdgeInsets.only(
+                            right: 20, left: 20, top: 20, bottom: 15),
                         child: MaterialButton(
                           onPressed: () {},
                           minWidth: 115,
                           height: 40,
-                          shape:
-                          RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
                           color: ConstColors.primaryColor,
                           child: const Text(
                             'قبول',
