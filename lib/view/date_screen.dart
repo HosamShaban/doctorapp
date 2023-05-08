@@ -41,6 +41,7 @@ class DateScreenState extends State<DateScreen> with TickerProviderStateMixin {
         });
       }
     });
+
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 260),
