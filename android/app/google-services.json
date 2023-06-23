@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "433945835143",
+    "project_id": "graduationproject-81da5",
+    "storage_bucket": "graduationproject-81da5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433945835143:android:0aeaa0dc105b3967086a22",
+        "android_client_info": {
+          "package_name": "com.example.doctorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433945835143-chjgul1831709ae23enejoud9lm9vbgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbIsTuA6AWG-8PBmcJzUjqRa7-cyWjSNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433945835143-chjgul1831709ae23enejoud9lm9vbgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "433945835143-deen1vt6aesrmjmkc4oajvtf5k6isfgj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.patientapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433945835143:android:996593c00e04ba98086a22",
+        "android_client_info": {
+          "package_name": "com.example.patientapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433945835143-chjgul1831709ae23enejoud9lm9vbgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbIsTuA6AWG-8PBmcJzUjqRa7-cyWjSNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433945835143-chjgul1831709ae23enejoud9lm9vbgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "433945835143-deen1vt6aesrmjmkc4oajvtf5k6isfgj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.patientapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
