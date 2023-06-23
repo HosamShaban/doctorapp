@@ -12,7 +12,6 @@ class NewReviewDetails extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.pop(context);
-
             },
             child: Container(
               padding: const EdgeInsets.only(right: 5),
@@ -34,32 +33,32 @@ class NewReviewDetails extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (BuildContext context, int index) {
             return InkWell(
-                onTap: () {
-              // Add your navigation code here, e.g.:
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const NewReview()),
-              );
-            },
-            child: Container(
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  color: const Color(0xffEAEAEA),
-                  borderRadius: BorderRadius.circular(12.0)),
-              child: const ListTile(
-                  leading: Icon(
-                    Icons.add,
-                    color: Colors.black,
-                  ),
-                  trailing: Icon(
-                    Icons.person,
-                    color: Colors.black,
-                  ),
-                  title: Text(
-                    "توفيق احمد",
-                    textDirection: TextDirection.rtl,
-                  )),
-            ),
+              onTap: () {
+                // Add your navigation code here, e.g.:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NewReview()),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: const Color(0xffEAEAEA),
+                    borderRadius: BorderRadius.circular(12.0)),
+                child: const ListTile(
+                    leading: Icon(
+                      Icons.add,
+                      color: Colors.black,
+                    ),
+                    trailing: Icon(
+                      Icons.person,
+                      color: Colors.black,
+                    ),
+                    title: Text(
+                      "توفيق احمد",
+                      textDirection: TextDirection.rtl,
+                    )),
+              ),
             );
           }),
     );

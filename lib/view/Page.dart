@@ -1,9 +1,9 @@
 import 'package:doctorapp/Consts/Defaultimages.dart';
 import 'package:doctorapp/Consts/colors.dart';
-import 'package:doctorapp/view/date_screen.dart';
-import 'package:doctorapp/view/home_screen.dart';
-import 'package:doctorapp/view/profile_screen.dart';
 import 'package:doctorapp/controller/screenIndexProvider.dart';
+import 'package:doctorapp/view/date_screen.dart';
+import 'package:doctorapp/view/doctorprofile.dart';
+import 'package:doctorapp/view/home_screen.dart';
 import 'package:doctorapp/widget/tab_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,12 +11,10 @@ import 'package:provider/provider.dart';
 class PersonalPage extends StatefulWidget {
   @override
   State<PersonalPage> createState() => _PersonalPageState();
-
 }
 
 class _PersonalPageState extends State<PersonalPage> {
   late final ScaffoldState scaffoldState;
-
 
   @override
   void initState() {
@@ -27,7 +25,7 @@ class _PersonalPageState extends State<PersonalPage> {
   List<dynamic> screens = [
     const HomeScreen(),
     const DateScreen(),
-    const ProfileScreen(),
+    const DoctorProfile(),
   ];
 
   @override
@@ -36,8 +34,7 @@ class _PersonalPageState extends State<PersonalPage> {
     int currentScreenIndex = _screenindexprovider.tabFlag;
     return Scaffold(
       body: screens[currentScreenIndex],
-      bottomNavigationBar:
-      Container(
+      bottomNavigationBar: Container(
         height: 60,
         width: 300,
         decoration: BoxDecoration(
@@ -68,7 +65,6 @@ class _PersonalPageState extends State<PersonalPage> {
                 });
               },
             ),
-
             TabCard(
               color: currentScreenIndex == 0
                   ? ConstColors.whiteFontColor
@@ -81,8 +77,6 @@ class _PersonalPageState extends State<PersonalPage> {
                 });
               },
             ),
-
-
             TabCard(
               color: currentScreenIndex == 2
                   ? ConstColors.whiteFontColor
@@ -94,7 +88,6 @@ class _PersonalPageState extends State<PersonalPage> {
                   _screenindexprovider.tabFlag = 2;
                 });
               },
-
             ),
           ],
         ),
@@ -102,4 +95,3 @@ class _PersonalPageState extends State<PersonalPage> {
     );
   }
 }
-

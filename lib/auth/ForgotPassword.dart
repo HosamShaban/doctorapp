@@ -1,6 +1,5 @@
+import 'package:doctorapp/auth/newpassword.dart';
 import 'package:flutter/material.dart';
-import 'package:doctorapp/auth/verify_email_screen.dart';
-
 
 class ForgotPassword extends StatelessWidget {
   static String id = '/ForgotPassword';
@@ -53,14 +52,15 @@ class ForgotPassword extends StatelessWidget {
                 height: 80,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
-                      Radius.circular(8),
-                    )),
+                  Radius.circular(8),
+                )),
                 padding: const EdgeInsets.all(12),
-                child:TextFormField(
+                child: TextFormField(
                   textAlign: TextAlign.right,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.grey),
+                      borderSide:
+                          const BorderSide(width: 2, color: Colors.grey),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     hintText: 'email@gmail.com',
@@ -75,7 +75,6 @@ class ForgotPassword extends StatelessWidget {
                     contentPadding: const EdgeInsets.only(right: 15),
                   ),
                 ),
-
               ),
             ],
           ),
@@ -94,8 +93,10 @@ class ForgotPassword extends StatelessWidget {
               children: [
                 TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => VerifyMobileScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CreateNewPassword()));
                     },
                     child: const Text(
                       'استمرار',

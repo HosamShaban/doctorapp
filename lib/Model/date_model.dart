@@ -1,8 +1,12 @@
 class DateModel {
-  final String title;
-  final String image;
-  final String booking;
+  late String title;
+  late String image;
+  late String booking;
 
-
-  DateModel(this.title, this.image , this.booking);
+  DateModel(this.title, this.image, this.booking);
+  DateModel.fromjson(Map<String, dynamic> map) {
+    this.title = map['title'];
+    this.image = map['image'];
+    this.booking = map['booking'];
+  }
 }
