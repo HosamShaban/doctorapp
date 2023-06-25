@@ -1,4 +1,4 @@
-import 'package:doctorapp/auth/signin_screen.dart';
+import 'package:doctorapp/auth/Register_screen.dart';
 import 'package:doctorapp/controller/screenIndexProvider.dart';
 import 'package:doctorapp/view/Page.dart';
 import 'package:doctorapp/widget/loading_animation_screen.dart';
@@ -17,10 +17,9 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  Future<bool> _checkEmailExists() async {
+  Future<String?> _getToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? email = prefs.getString('email');
-    return email != null;
+    return prefs.getString('token');
   }
 
   @override
@@ -35,20 +34,15 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(create: (context) => screenIndexProvider())
           ],
           child: MaterialApp(
-            home: FutureBuilder<bool>(
-              future: _checkEmailExists(),
+            home: FutureBuilder<String?>(
+              future: _getToken(),
               builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  if (snapshot.data!) {
-                    // Email exists, navigate to home screen
-                    return PersonalPage(); // Replace with your home screen widget
-                  } else {
-                    // Email does not exist, navigate to onboarding screen
-                    return const LoginScreen();
-                  }
-                } else {
-                  // Show a loading indicator while checking email existence
+                if (snapshot.connectionState == ConnectionState.waiting) {
                   return LoadingAnimationPage();
+                } else if (snapshot.hasData && snapshot.data != null) {
+                  return PersonalPage(); // Replace with your home screen widget
+                } else {
+                  return const RegisterScreen();
                 }
               },
             ),
