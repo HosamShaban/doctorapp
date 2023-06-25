@@ -57,6 +57,16 @@ class _LoginScreenState extends State<LoginScreen> {
         print('Message: $message');
         print('id : $id');
         print('token is : $token');
+
+        SharedPreferences userData = await SharedPreferences.getInstance();
+        userData.setString('email', email);
+        userData.setBool('login', true);
+        userData.setString('token', token);
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PersonalPage()),
+        );
       } else {
         print('Error retrieving data. Status code: ${response.statusCode}');
       }
@@ -87,12 +97,19 @@ class _LoginScreenState extends State<LoginScreen> {
     var validate = _formKey.currentState!.validate();
 
     if (validate) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PersonalPage()));
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => PersonalPage()),
+      );
     } else {
       setState(() {
         _autoValidate = true;
       });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Email is not registered'),
+        ),
+      );
     }
   }
 
@@ -259,13 +276,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               login(emailController.text.toString(),
                                   passwordController.text.toString()),
                               _signInProcess(context),
-                              UserData.setBool("login", false),
-                              UserData.setString(
-                                  "email", emailController.text.toString()),
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => PersonalPage())),
                             }),
                   ),
                 ],

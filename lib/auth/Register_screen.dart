@@ -321,7 +321,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                           ],
                         ),
-                        onPressed: () async => {register()}),
+                        onPressed: () async =>
+                            {register(), _signUpProcess(context)}),
                   ),
                 ],
               ),
@@ -333,9 +334,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 InkWell(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
                   },
                   child: const Text(
                     " تسجيل الدخول",
