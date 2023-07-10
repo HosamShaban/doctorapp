@@ -1,8 +1,9 @@
+import 'package:doctorapp/Model/login.dart';
 import 'package:doctorapp/auth/Register_screen.dart';
+import 'package:doctorapp/auth/signin_screen.dart';
 import 'package:doctorapp/controller/screenIndexProvider.dart';
 import 'package:doctorapp/view/Page.dart';
 import 'package:doctorapp/widget/loading_animation_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +11,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(create: (context) => screenIndexProvider())
           ],
           child: MaterialApp(
-            home: FutureBuilder<String?>(
+            home: LoginScreen(),
+            /*FutureBuilder<String?>(
               future: _getToken(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
@@ -42,10 +43,10 @@ class MyApp extends StatelessWidget {
                 } else if (snapshot.hasData && snapshot.data != null) {
                   return PersonalPage(); // Replace with your home screen widget
                 } else {
-                  return const RegisterScreen();
+                  return const LoginScreen();
                 }
               },
-            ),
+            ),*/
             debugShowCheckedModeBanner: false,
             theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Tajawal'),
           ),
