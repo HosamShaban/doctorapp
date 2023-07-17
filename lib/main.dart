@@ -1,9 +1,6 @@
-import 'package:doctorapp/Model/login.dart';
-import 'package:doctorapp/auth/Register_screen.dart';
-import 'package:doctorapp/auth/signin_screen.dart';
 import 'package:doctorapp/controller/screenIndexProvider.dart';
 import 'package:doctorapp/view/Page.dart';
-import 'package:doctorapp/widget/loading_animation_screen.dart';
+import 'package:doctorapp/view/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -34,19 +31,18 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(create: (context) => screenIndexProvider())
           ],
           child: MaterialApp(
-            home: LoginScreen(),
-            /*FutureBuilder<String?>(
+            home: FutureBuilder<String?>(
               future: _getToken(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return LoadingAnimationPage();
+                  return const SplashScreen();
                 } else if (snapshot.hasData && snapshot.data != null) {
                   return PersonalPage(); // Replace with your home screen widget
                 } else {
-                  return const LoginScreen();
+                  return const SplashScreen();
                 }
               },
-            ),*/
+            ),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Tajawal'),
           ),
